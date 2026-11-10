@@ -1,10 +1,10 @@
 {
   "domain": "biolite",
   "name": "BioLite Backup",
-  "codeowners": ["@YOUR_GITHUB_USERNAME"],
+  "codeowners": ["@bartipoo"],
   "config_flow": true,
-  "documentation": "https://github.com/YOUR_GITHUB_USERNAME/ha-biolite-backup",
-  "issue_tracker": "https://github.com/YOUR_GITHUB_USERNAME/ha-biolite-backup/issues",
+  "documentation": "https://github.com/bartipoo/ha-biolite-backup",
+  "issue_tracker": "https://github.com/bartipoo/ha-biolite-backup/issues",
   "iot_class": "cloud_polling",
   "requirements": [],
   "version": "0.1.0"
