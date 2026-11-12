@@ -47,3 +47,17 @@ endpoint and are never sent anywhere else.
   everything here is decoded out of that one opaque blob.
 - Some fields in the raw blob are still unidentified/unused and are intentionally not
   surfaced as entities.
+
+## Future work
+
+This integration is cloud-polling only (`iot_class: cloud_polling`) -- it depends on
+internet connectivity to reach BioLite's backend, which is a real limitation for a
+backup-power device you may most want visibility into during an outage.
+
+A fully local (no-internet) path was investigated and ruled out for Wi-Fi: the unit
+does not advertise ESP RainMaker's local-control service and has no open TCP ports at
+all. A BLE-based local path looks more promising (the unit exposes a custom BLE
+provisioning service with endpoints named `device-state` and `hcp-data`, matching the
+cloud API's data model) but was not completed -- it requires implementing Espressif's
+protocomm session handshake over BLE, which is a separate, substantial piece of work.
+Contributions welcome.
